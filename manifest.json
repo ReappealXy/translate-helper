@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "多语言翻译助手",
+  "version": "1.0",
+  "description": "网页选词翻译工具，支持多种语言互译",
+  "author": "Rexy",
+  "homepage_url": "https://www.rexy.xin",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "多语言翻译助手"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+} 
